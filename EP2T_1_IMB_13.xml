@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE PARRILLATV [
+<!ELEMENT PARRILLATV (Canal+)>
+<!ELEMENT Canal (Logotipo, Programa+)>
+<!ELEMENT Logotipo EMPTY>
+<!ELEMENT Programa (Info, Fecha+)>
+<!ELEMENT Info (Titulo, Descripcion?)>
+<!ELEMENT Titulo (#PCDATA)>
+<!ELEMENT Descripcion (#PCDATA)>
+<!ELEMENT Fecha (Dia, Mes, Hora)>
+<!ELEMENT Dia (#PCDATA)>
+<!ELEMENT Mes (#PCDATA)>
+<!ELEMENT Hora (#PCDATA)>
+<!ATTLIST PARRILLATV Nommes CDATA #REQUIRED>
+<!ATTLIST PARRILLATV Año CDATA #REQUIRED>
+<!ATTLIST Programa Audiencia CDATA #IMPLIED>
+<!ATTLIST Logotipo NomArch CDATA #REQUIRED>
+]>
+
+<PARRILLATV Nommes="Noviembre" Año="2020">
+
+	<Canal>
+		<Logotipo NomArch="LogImg.png"></Logotipo>
+		<Programa Audiencia="40%">
+			<Info>
+				<Titulo>Telediario
+				</Titulo>
+        			<Descripcion>Telediario del canal 1
+        			</Descripcion>
+      			</Info>
+      			<Fecha>
+        			<Dia> 1
+        			</Dia>
+        			<Mes> 11
+        			</Mes>
+        			<Hora> 14:00
+        			</Hora>
+      			</Fecha>
+  		</Programa>
+  		<Programa Audiencia="25%">
+      			<Info>
+        			<Titulo>Programa de cocina
+        			</Titulo>
+        			<Descripcion>Programa de cocina del canal 1
+        			</Descripcion>
+      			</Info>
+      			<Fecha>
+        			<Dia>6
+        			</Dia>
+        			<Mes>11
+        			</Mes>
+        			<Hora>14:30
+        			</Hora>
+      			</Fecha>
+      			<Fecha>
+        			<Dia>15
+        			</Dia>
+        			<Mes>11
+        			</Mes>
+        			<Hora>14:30
+        			</Hora>
+      			</Fecha>
+  		</Programa>
+	</Canal>
+
+  	<Canal>
+    		<Logotipo NomArch="LogImg2.png"></Logotipo>
+    		<Programa Audiencia="35%">
+      			<Info>
+        			<Titulo>Telediario
+        			</Titulo>
+        			<Descripcion>Telediario del canal 2
+        			</Descripcion>
+      			</Info>
+      			<Fecha>
+        			<Dia>1
+        			</Dia>
+        			<Mes>11
+        			</Mes>
+        			<Hora>14:30
+        			</Hora>
+      			</Fecha>
+  		</Programa>
+	</Canal>
+
+</PARRILLATV>
